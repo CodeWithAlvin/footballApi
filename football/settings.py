@@ -141,4 +141,5 @@ if os.environ.get("PRODUCTION")=="TRUE":
 	STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 	MIDDLEWARE.append( 'whitenoise.middleware.WhiteNoiseMiddleware')
 	DEBUG=False
+        STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
