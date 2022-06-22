@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,12 +10,12 @@
       name="description"
       content="Welcome to Football Fixture Api."
     />
-    <link rel="icon" href="/static/image/icon.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="{% static "image/icon.png" %}" type="image/png" sizes="16x16">
     <title>Football Fixture api</title>
     <style>
     .bgc::before{
     content: "";
-    background-image: url("/static/images/bg.svg");
+    background-image: url("{% static "image/bg.svg" %}");
     background-repeat: no-repeat;
     background-blend-mode: darken;
     background-size: cover;
@@ -102,9 +103,9 @@
   {% for data in keys %}
   <tbody>
     <tr>
-      <td style="max-width:130px ;">{{data.teams.0}} <img src="{{data.logos.0}}" width="20" ></td>
+      <td style="max-width:130px ;">{{data.teams.0}} <img src="{% static {{data.logos.0}} %}" width="20" ></td>
       <td class="text-danger"><b class="text-uppercase">{{data.score.0}}</b></td>
-      <td style="max-width:130px ;">{{data.teams.1}} <img src="{{data.logos.1}}" width="20" ></td>
+      <td style="max-width:130px ;">{{data.teams.1}} <img src="{% static {{data.logos.1}} %}" width="20" ></td>
       <td class='date' data_behavior="date_time">{{data.timing.0}}</td>
     </tr>
   </tbody>
@@ -124,7 +125,7 @@
 
 
   </body>
-  <script src="/static/js/script.js"></script>
+  <script src="{% static "js/script.js" %}"></script>
   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
   </html>
