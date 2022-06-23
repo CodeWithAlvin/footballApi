@@ -103,9 +103,9 @@
   {% for data in keys %}
   <tbody>
     <tr>
-      <td style="max-width:130px ;">{{data.teams.0}} <img src="{% static {{data.logos.0}} %}" width="20" ></td>
+      <td style="max-width:130px ;">{{data.teams.0}} <img src="{% static data.logos.0 %}" width="20" ></td>
       <td class="text-danger"><b class="text-uppercase">{{data.score.0}}</b></td>
-      <td style="max-width:130px ;">{{data.teams.1}} <img src="{% static {{data.logos.1}} %}" width="20" ></td>
+      <td style="max-width:130px ;">{{data.teams.1}} <img src="{% static data.logos.1 %}" width="20" ></td>
       <td class='date' data_behavior="date_time">{{data.timing.0}}</td>
     </tr>
   </tbody>
