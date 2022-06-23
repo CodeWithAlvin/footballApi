@@ -138,7 +138,7 @@ STATIC_ROOT = ""
 
 # environment setup
 if os.environ.get("PRODUCTION")=="TRUE":
-    #STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+    STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     MIDDLEWARE.append( 'whitenoise.middleware.WhiteNoiseMiddleware')
-    DEBUG=False
+    #DEBUG=False
